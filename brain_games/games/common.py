@@ -1,10 +1,11 @@
 from prompt import string
 
 
-def welcome_player():
+def welcome_player(rule):
     print('Welcome to the Brain Games!')
     name = string('May I have your name? ')
     print('Hello, {}!'.format(name))
+    print(rule)
     return name
 
 
