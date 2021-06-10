@@ -1,8 +1,14 @@
-from brain_games.games.common import ask_qn
-
+from brain_games.games.common import ask_qn, welcome_player
+from brain_games.games.common import print_game_result
 QUESTIONS_COUNT = 3
 MIN_RAND_NUM = 1
 MAX_RAND_NUM = 100
+
+
+def start_game(rule, game_data):
+    pl_name = welcome_player(rule)
+    winner_flag = is_game_winner(game_data)
+    print_game_result(pl_name, winner_flag)
 
 
 def is_game_winner(get_game_data, qn_count=QUESTIONS_COUNT):
