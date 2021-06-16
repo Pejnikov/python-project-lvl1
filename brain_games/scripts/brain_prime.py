@@ -5,6 +5,8 @@ from brain_games.games.games_logic import MIN_RAND_NUM, MAX_RAND_NUM
 
 
 def is_prime(number):
+    if number <= 1:
+        return False
     for i in range(2, 1 + int(sqrt(number))):
         if number % i == 0:
             return False
