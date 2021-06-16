@@ -1,7 +1,14 @@
 from random import randint
-from math import gcd
 from brain_games.games.games_logic import start_game
 from brain_games.games.games_logic import MIN_RAND_NUM, MAX_RAND_NUM
+
+
+def gcd(a, b):
+    while b != 0:
+        temp = a
+        a = b
+        b = temp % b
+    return a
 
 
 def get_brain_gcd_data():
