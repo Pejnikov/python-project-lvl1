@@ -1,5 +1,5 @@
-from brain_games.games.common import ask_qn, welcome_player
-from brain_games.games.common import print_game_result
+from brain_games.game_engine.player_interaction import ask_qn, welcome_player
+from brain_games.game_engine.player_interaction import print_game_result
 QUESTIONS_COUNT = 3
 MIN_RAND_NUM = 1
 MAX_RAND_NUM = 100
