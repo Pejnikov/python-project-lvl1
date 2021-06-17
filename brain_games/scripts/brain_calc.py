@@ -9,12 +9,14 @@ def get_brain_calc_data():
     possible_operators = '+-*'
     cur_operator = choice(possible_operators)
     qn_sentence = '{} {} {}'.format(operand_1, cur_operator, operand_2)
-    if cur_operator == '+':
+    if cur_operator == possible_operators[0]:
         answ = operand_1 + operand_2
-    elif cur_operator == '-':
+    elif cur_operator == possible_operators[1]:
         answ = operand_1 - operand_2
-    else:
+    elif cur_operator == possible_operators[2]:
         answ = operand_1 * operand_2
+    else:
+        raise ValueError
     return(qn_sentence, answ)
 
 
