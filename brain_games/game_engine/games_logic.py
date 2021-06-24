@@ -19,4 +19,3 @@ def is_game_winner(get_game_data, qn_count=3):
             print(error_msg.format(answ, exp_answ))
             return False
     return True
-
