@@ -1,11 +1,12 @@
 from random import randint, choice
-from brain_games.game_engine.games_logic import start_game
-from brain_games.game_engine.games_logic import MIN_RAND_NUM, MAX_RAND_NUM
+from ..game_engine.games_logic import start_game
 
 
 def get_brain_calc_data():
-    operand_1 = randint(MIN_RAND_NUM, MAX_RAND_NUM)
-    operand_2 = randint(MIN_RAND_NUM, MAX_RAND_NUM)
+    min_rand_num = 1
+    max_rand_num = 15
+    operand_1 = randint(min_rand_num, max_rand_num)
+    operand_2 = randint(min_rand_num, max_rand_num)
     possible_operators = '+-*'
     cur_operator = choice(possible_operators)
     qn_sentence = '{} {} {}'.format(operand_1, cur_operator, operand_2)

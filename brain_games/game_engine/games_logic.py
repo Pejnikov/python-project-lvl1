@@ -1,8 +1,5 @@
-from brain_games.game_engine.player_interaction import ask_qn, welcome_player
-from brain_games.game_engine.player_interaction import print_game_result
-QUESTIONS_COUNT = 3
-MIN_RAND_NUM = 1
-MAX_RAND_NUM = 100
+from .player_interaction import ask_qn, welcome_player
+from .player_interaction import print_game_result
 
 
 def start_game(rule, game_data):
@@ -11,7 +8,7 @@ def start_game(rule, game_data):
     print_game_result(pl_name, winner_flag)
 
 
-def is_game_winner(get_game_data, qn_count=QUESTIONS_COUNT):
+def is_game_winner(get_game_data, qn_count=3):
     for round in range(qn_count):
         (qn_data, exp_answ) = get_game_data()
         if not is_won_round(qn_data, exp_answ):

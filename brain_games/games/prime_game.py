@@ -1,7 +1,6 @@
 from random import randint
 from math import sqrt
-from brain_games.game_engine.games_logic import start_game
-from brain_games.game_engine.games_logic import MIN_RAND_NUM, MAX_RAND_NUM
+from ..game_engine.games_logic import start_game
 
 
 def is_prime(number):
@@ -14,7 +13,9 @@ def is_prime(number):
 
 
 def get_brain_prime_data():
-    rand_num = randint(MIN_RAND_NUM, MAX_RAND_NUM)
+    min_rand_num = 1
+    max_rand_num = 3571
+    rand_num = randint(min_rand_num, max_rand_num)
     answer = 'yes' if is_prime(rand_num) else 'no'
     return (rand_num, answer)
 

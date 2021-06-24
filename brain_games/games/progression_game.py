@@ -1,13 +1,14 @@
 from random import randint
-from brain_games.game_engine.games_logic import start_game
-from brain_games.game_engine.games_logic import MIN_RAND_NUM, MAX_RAND_NUM
+from ..game_engine.games_logic import start_game
 
 
 def get_brain_progression_data():
     sentence = ''
     length = 10
-    diff = randint(MIN_RAND_NUM, MAX_RAND_NUM)
-    cur_prog_val = randint(0, MAX_RAND_NUM)
+    min_rand_num = 1
+    max_rand_num = 20
+    diff = randint(min_rand_num, max_rand_num)
+    cur_prog_val = randint(0, max_rand_num)
     qn_position = randint(0, length - 1)
 
     for cur_prog_position in range(length):
