@@ -11,17 +11,12 @@ def start_game(rule, game_data):
 def is_game_winner(get_game_data, qn_count=3):
     for round in range(qn_count):
         (qn_data, exp_answ) = get_game_data()
-        if not is_won_round(qn_data, exp_answ):
+        answ = ask_qn(qn_data)
+        if str(answ) == str(exp_answ):
+            print('Correct!')
+        else:
+            error_msg = "'{}' is wrong answer ;(. Correct answer was '{}'."
+            print(error_msg.format(answ, exp_answ))
             return False
     return True
 
-
-def is_won_round(question_data, exp_answer):
-    answ = ask_qn(question_data)
-    if str(answ) == str(exp_answer):
-        print('Correct!')
-        return True
-    else:
-        error_msg = "'{}' is wrong answer ;(. Correct answer was '{}'."
-        print(error_msg.format(answ, exp_answer))
-        return False
