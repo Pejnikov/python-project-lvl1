@@ -9,8 +9,8 @@ def welcome_player(rule):
     return name
 
 
-def ask_qn(qn_data):
-    print('Question: {}'.format(qn_data))
+def get_ans_to_qn(qn_string):
+    print('Question: {}'.format(qn_string))
     answer = string('Your answer: ')
     return answer
 

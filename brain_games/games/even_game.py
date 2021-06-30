@@ -6,8 +6,8 @@ def get_brain_even_data():
     min_rand_num = 1
     max_rand_num = 100
     rand_num = randint(min_rand_num, max_rand_num)
-    is_even = 'yes' if rand_num % 2 == 0 else 'no'
-    return (rand_num, is_even)
+    answ = 'yes' if rand_num % 2 == 0 else 'no'
+    return (rand_num, answ)
 
 
 def start_even_game():

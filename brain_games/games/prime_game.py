@@ -16,8 +16,8 @@ def get_brain_prime_data():
     min_rand_num = 1
     max_rand_num = 3571
     rand_num = randint(min_rand_num, max_rand_num)
-    answer = 'yes' if is_prime(rand_num) else 'no'
-    return (rand_num, answer)
+    answ = 'yes' if is_prime(rand_num) else 'no'
+    return (rand_num, answ)
 
 
 def start_prime_game():
