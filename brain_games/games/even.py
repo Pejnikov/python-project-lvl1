@@ -1,5 +1,5 @@
 from random import randint
-from ..game_engine.games_logic import start_game
+from brain_games.game_engine.games_logic import start_game
 
 
 def get_brain_even_data():

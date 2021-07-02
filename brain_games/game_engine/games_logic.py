@@ -1,5 +1,5 @@
-from .player_interaction import get_ans_to_qn, welcome_player
-from .player_interaction import print_game_result
+from brain_games.game_engine.player_interaction import get_ans_to_qn, welcome_player
+from brain_games.game_engine.player_interaction import print_game_result
 
 
 def start_game(rule, game):
