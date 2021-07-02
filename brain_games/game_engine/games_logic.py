@@ -1,21 +1,27 @@
-from brain_games.game_engine.player_interaction import get_ans_to_qn, welcome_player
-from brain_games.game_engine.player_interaction import print_game_result
+from prompt import string
 
 
 def start_game(rule, game):
-    pl_name = welcome_player(rule)
-    winner_flag = is_game_winner(game)
-    print_game_result(pl_name, winner_flag)
+    print('Welcome to the Brain Games!')
+    name = string('May I have your name? ')
+    print('Hello, {}!'.format(name))
+    print(rule)
+    winner = is_game_winner(game)
+    if winner:
+        print("Congratulations, {}!".format(name))
+    else:
+        print("Let's try again, {}!".format(name))
 
 
 def is_game_winner(get_game_data, qn_count=3):
     for _ in range(qn_count):
-        (qn_data, exp_answ) = get_game_data()
-        answ = get_ans_to_qn(qn_data)
-        if str(answ) == str(exp_answ):
+        (question, expected_answer) = get_game_data()
+        print('Question: {}'.format(question))
+        answer = string('Your answer: ')
+        if str(answer) == str(expected_answer):
             print('Correct!')
         else:
             error_msg = "'{}' is wrong answer ;(. Correct answer was '{}'."
-            print(error_msg.format(answ, exp_answ))
+            print(error_msg.format(answer, expected_answer))
             return False
     return True
