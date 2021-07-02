@@ -6,8 +6,8 @@ from ..game_engine.games_logic import start_game
 def is_prime(number):
     if number <= 1:
         return False
-    for i in range(2, 1 + int(sqrt(number))):
-        if number % i == 0:
+    for divider in range(2, 1 + int(sqrt(number))):
+        if number % divider == 0:
             return False
     return True
 

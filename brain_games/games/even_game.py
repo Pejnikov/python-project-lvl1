@@ -9,7 +9,6 @@ def get_brain_even_data():
     answ = 'yes' if rand_num % 2 == 0 else 'no'
     return (rand_num, answ)
 
-
 def start_even_game():
     game_rule = 'Answer "yes" if the number is even, otherwise answer "no".'
     start_game(game_rule, get_brain_even_data)
