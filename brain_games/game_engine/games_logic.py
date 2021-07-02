@@ -9,7 +9,7 @@ def start_game(rule, game):
 
 
 def is_game_winner(get_game_data, qn_count=3):
-    for round in range(qn_count):
+    for _ in range(qn_count):
         (qn_data, exp_answ) = get_game_data()
         answ = get_ans_to_qn(qn_data)
         if str(answ) == str(exp_answ):
