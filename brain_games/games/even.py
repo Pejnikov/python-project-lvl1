@@ -3,11 +3,11 @@ from brain_games.game_engine.games_logic import start_game
 
 
 def get_brain_even_data():
-    min_rand_num = 1
-    max_rand_num = 100
-    rand_num = randint(min_rand_num, max_rand_num)
-    answ = 'yes' if rand_num % 2 == 0 else 'no'
-    return (rand_num, answ)
+    MIN_BORDER = 1
+    MAX_BORDER = 100
+    question = randint(MIN_BORDER, MAX_BORDER)
+    answer = 'yes' if question % 2 == 0 else 'no'
+    return (question, answer)
 
 def start_even_game():
     game_rule = 'Answer "yes" if the number is even, otherwise answer "no".'

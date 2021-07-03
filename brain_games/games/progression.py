@@ -3,21 +3,21 @@ from brain_games.game_engine.games_logic import start_game
 
 
 def get_brain_progression_data():
-    qn_sentence = ''
-    length = 10
-    min_rand_num = 1
-    max_rand_num = 20
-    diff = randint(min_rand_num, max_rand_num)
-    cur_prog_val = randint(0, max_rand_num)
-    qn_position = randint(0, length - 1)
-    for cur_prog_position in range(length):
-        cur_prog_val += diff
-        if cur_prog_position != qn_position:
-            qn_sentence += '{} '.format(str(cur_prog_val))
+    FIELDS_COUNT = 10
+    MIN_BORDER = 1
+    MAX_BORDER = 20
+    question = ''
+    difference = randint(MIN_BORDER, MAX_BORDER)
+    field_value = randint(0, MAX_BORDER)
+    empty_field = randint(0, FIELDS_COUNT - 1)
+    for field in range(FIELDS_COUNT):
+        field_value += difference
+        if field != empty_field:
+            question += '{} '.format(str(field_value))
         else:
-            missed_member = cur_prog_val
-            qn_sentence += '.. '
-    return (qn_sentence.strip(), missed_member)
+            answer = field_value
+            question += '.. '
+    return (question.strip(), answer)
 
 
 def start_prog_game():

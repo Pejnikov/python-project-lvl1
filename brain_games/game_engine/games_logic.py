@@ -13,15 +13,15 @@ def start_game(rule, game):
         print("Let's try again, {}!".format(name))
 
 
-def is_game_winner(get_game_data, qn_count=3):
-    for _ in range(qn_count):
+def is_game_winner(get_game_data, questins_count=3):
+    for _ in range(questins_count):
         (question, expected_answer) = get_game_data()
         print('Question: {}'.format(question))
         answer = string('Your answer: ')
         if str(answer) == str(expected_answer):
             print('Correct!')
         else:
-            error_msg = "'{}' is wrong answer ;(. Correct answer was '{}'."
-            print(error_msg.format(answer, expected_answer))
+            error_message = "'{}' is wrong answer ;(. Correct answer was '{}'."
+            print(error_message.format(answer, expected_answer))
             return False
     return True
