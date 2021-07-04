@@ -1,5 +1,7 @@
 from random import randint, choice
-from brain_games.game_engine.games_logic import start_game
+
+
+CALC_RULE = 'What is the result of the expression?'
 
 
 def get_brain_calc_data():
@@ -22,8 +24,3 @@ def get_brain_calc_data():
     else:
         raise ValueError
     return(question, answer)
-
-
-def start_calc_game():
-    game_rule = 'What is the result of the expression?'
-    start_game(game_rule, get_brain_calc_data)

@@ -1,13 +1,15 @@
 from random import randint
-from brain_games.game_engine.games_logic import start_game
 
 
-def gcd(a, b):
-    while b != 0:
-        temp = a
-        a = b
-        b = temp % b
-    return a
+GCD_RULE = 'Find the greatest common divisor of given numbers.'
+
+
+def gcd(number1, number2):
+    while number2 != 0:
+        temp = number1
+        number1 = number2
+        number2 = temp % number2
+    return number1
 
 
 def get_brain_gcd_data():
@@ -18,8 +20,3 @@ def get_brain_gcd_data():
     question = '{} {}'.format(number_1, number_2)
     answer = gcd(number_1, number_2)
     return(question, answer)
-
-
-def start_gcd_game():
-    game_rule = 'Find the greatest common divisor of given numbers.'
-    start_game(game_rule, get_brain_gcd_data)

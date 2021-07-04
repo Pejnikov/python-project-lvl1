@@ -1,8 +1,10 @@
 from random import randint
-from brain_games.game_engine.games_logic import start_game
 
 
-def get_progression(elenemts_count = 10):
+PROGRESSION_RULE = 'What number is missing in the progression?'
+
+
+def get_progression(elenemts_count=10):
     MIN_BORDER = 1
     MAX_BORDER = 20
     difference = randint(MIN_BORDER, MAX_BORDER)
@@ -18,7 +20,7 @@ def make_progression_holey(progression):
     progression_length = len(progression)
     if progression_length < 1:
         raise ValueError
-    missed_position = randint(0, progression_length -1)
+    missed_position = randint(0, progression_length - 1)
     hole_value = progression[missed_position]
     progression[missed_position] = '..'
     return hole_value
@@ -29,8 +31,3 @@ def get_brain_progression_data():
     answer = make_progression_holey(progression)
     question = ' '.join(str(element) for element in progression)
     return (question, answer)
-
-
-def start_prog_game():
-    game_rule = 'What number is missing in the progression?'
-    start_game(game_rule, get_brain_progression_data)

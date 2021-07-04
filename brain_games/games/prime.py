@@ -1,6 +1,8 @@
 from random import randint
 from math import sqrt
-from brain_games.game_engine.games_logic import start_game
+
+
+PRIME_RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def is_prime(number):
@@ -18,8 +20,3 @@ def get_brain_prime_data():
     question = randint(MIN_BORDER, MAX_BORDER)
     answer = 'yes' if is_prime(question) else 'no'
     return (question, answer)
-
-
-def start_prime_game():
-    game_rule = 'Answer "yes" if given number is prime. Otherwise answer "no".'
-    start_game(game_rule, get_brain_prime_data)
