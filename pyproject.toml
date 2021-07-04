@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hexlet-code"
-version = "0.4.1"
+version = "0.5.1"
 description = "Games for improving mathematical skills"
 authors = ["Pejnikov"]
 repository = "https://github.com/Pejnikov/python-project-lvl1"
@@ -15,7 +15,7 @@ packages = [
 
 [tool.poetry.dependencies]
 python = "^3.7"
-prompt = "^0.5.1"
+prompt = "^0.4.3"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^3.9.2"
