@@ -2,17 +2,17 @@ from random import randint, choice
 
 
 CALC_RULE = 'What is the result of the expression?'
+MIN_BORDER = 1
+MAX_BORDER = 15
+PLUS = '+'
+MINUS = '-'
+MULTIPLICATION = '*'
 
 
 def get_brain_calc_data():
-    MIN_BORDER = 1
-    MAX_BORDER = 15
-    PLUS = '+'
-    MINUS = '-'
-    MULTIPLICATION = '*'
     operand_1 = randint(MIN_BORDER, MAX_BORDER)
     operand_2 = randint(MIN_BORDER, MAX_BORDER)
-    possible_operators = '{}{}{}'.format(PLUS, MINUS, MULTIPLICATION)
+    possible_operators = [PLUS, MINUS, MULTIPLICATION]
     operator = choice(possible_operators)
     question = '{} {} {}'.format(operand_1, operator, operand_2)
     if operator == PLUS:

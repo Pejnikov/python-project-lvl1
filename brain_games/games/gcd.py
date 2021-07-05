@@ -2,6 +2,8 @@ from random import randint
 
 
 GCD_RULE = 'Find the greatest common divisor of given numbers.'
+MIN_BORDER = 1
+MAX_BORDER = 25
 
 
 def gcd(number1, number2):
@@ -13,8 +15,6 @@ def gcd(number1, number2):
 
 
 def get_brain_gcd_data():
-    MIN_BORDER = 1
-    MAX_BORDER = 25
     number_1 = randint(MIN_BORDER, MAX_BORDER)
     number_2 = randint(MIN_BORDER, MAX_BORDER)
     question = '{} {}'.format(number_1, number_2)

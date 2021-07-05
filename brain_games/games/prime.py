@@ -3,6 +3,8 @@ from math import sqrt
 
 
 PRIME_RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+MIN_BORDER = 1
+MAX_BORDER = 3571
 
 
 def is_prime(number):
@@ -15,8 +17,6 @@ def is_prime(number):
 
 
 def get_brain_prime_data():
-    MIN_BORDER = 1
-    MAX_BORDER = 3571
     question = randint(MIN_BORDER, MAX_BORDER)
     answer = 'yes' if is_prime(question) else 'no'
     return (question, answer)
